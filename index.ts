@@ -83,11 +83,24 @@ const grabLinks = async ({title, url, minuteLapse}: {
     }
 }
 
+const waitSecond = async () => {
+  const prom = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(undefined)
+    }, 1_000)
+  })
+  return prom;
+}
+
 (function run() {
-  input.forEach(({minuteLapse, title, url}) => {
-    grabLinks({title, url, minuteLapse})
-    cron.schedule(`*/${minuteLapse} * * * *`, () => {
+  input.forEach(({minuteLapse, title, url}, i) => {
+    setTimeout(() => {
       grabLinks({title, url, minuteLapse})
+    }, 1_000 * i)
+    cron.schedule(`*/${minuteLapse} * * * *`, () => {
+      setTimeout(() => {
+        grabLinks({title, url, minuteLapse})
+      }, 1_000 * i)
     });
   })
 })()
