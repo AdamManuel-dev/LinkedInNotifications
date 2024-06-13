@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "CommonJS",
+      // typescript options here
+      "lib": ["es5", "es6", "dom"],
+      "allowJs": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+    },
+  }
