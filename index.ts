@@ -42,7 +42,7 @@ const grabLinks = async ({title, url, minuteLapse}: {
 
      // always check past hour, lowest filter that consistently works
     //  Also remove bad characters
-    const properUrl = url.replace(/f_TPR\=r\d+/, minuteLapse <= 60 ? `f_TPR=r3600` : `f_TPR=r${minuteLapse*60}`).replace(/\n/g, '').trim()
+    const properUrl = url.replace(/f_TPR\=r\d+/, minuteLapse <= 60 ? `f_TPR=r3600` : `f_TPR=r3600`).replace(/\n/g, '').trim()
   
     // Full puppeteer API is available
     await page.goto(properUrl);
@@ -66,7 +66,8 @@ const grabLinks = async ({title, url, minuteLapse}: {
         message: `Found ${links.length} Job Postings`,
         sound: 'Basso', // Only Notification Center or Windows Toasters
         actions: 'Open in Chrome',
-        timeout: false
+        timeout: false,
+        contentImage: `${process.cwd()}/LinkedIn.svg`,
       },
       async function (_error, response, _metadata) {
         if(response === 'activate') {
