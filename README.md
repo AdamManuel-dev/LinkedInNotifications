@@ -1,5 +1,7 @@
 # LinkedInNotifications
 
+This was mostly made for myself, and is only designed for MacOS and Google Chrome
+
 ## DEMO
 
 
