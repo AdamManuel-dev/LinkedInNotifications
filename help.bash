@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 echo "-------------------------"
 echo ""
 echo "When you open the links through the notification, it will save that it was opened and stop notifying you about that specific job post."
@@ -13,4 +13,4 @@ echo "-------------------------"
 echo ""
 echo "These are the executable files to run commands"
 echo ""
-find . -type f -name "*.command"
+find . -type f -name "*.bash"
