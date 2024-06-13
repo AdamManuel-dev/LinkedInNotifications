@@ -2,8 +2,7 @@
 
 This was mostly made for myself, and is only designed for MacOS and Google Chrome
 
-## DEMO
+## Demo Video
 
-
-https://github.com/AdamManuel-dev/LinkedInNotifications/assets/68038126/70e998fc-f5ca-4548-bf64-70f3d0ea7546
+https://github.com/AdamManuel-dev/LinkedInNotifications/assets/68038126/6e25a26e-e344-4d32-afef-c54c176ed886
 
