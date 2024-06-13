@@ -83,21 +83,11 @@ const grabLinks = async ({title, url, minuteLapse}: {
     }
 }
 
-const waitASecond = (fn: () => void) => {
-  setTimeout(() => {
-    fn()
-  }, 1_000)
-}
-
 (function run() {
   input.forEach(({minuteLapse, title, url}, i) => {
-    waitASecond(() => {
-      grabLinks({title, url, minuteLapse})
-    })
+    grabLinks({title, url, minuteLapse})
     cron.schedule(`*/${minuteLapse} * * * *`, () => {
-      waitASecond(() => {
-        grabLinks({title, url, minuteLapse})
-      })
+      grabLinks({title, url, minuteLapse})
     });
   })
 })()
