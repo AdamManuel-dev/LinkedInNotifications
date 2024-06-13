@@ -1,4 +1,4 @@
-# LinkedIn System Notifications (MacOS)
+# ![alt text](https://raw.githubusercontent.com/AdamManuel-dev/LinkedInNotifications/main/LinkedIn.svg "LinkedIn Logo") LinkedIn System Notifications (MacOS)
 
 This was mostly made for myself, and is only designed for MacOS and Google Chrome
 
