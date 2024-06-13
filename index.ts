@@ -66,7 +66,7 @@ const grabLinks = async ({title, url, minuteLapse}: {
         message: `Found ${links.length} Job Postings`,
         sound: 'Basso', // Only Notification Center or Windows Toasters
         actions: 'Open in Chrome',
-        timeout: false,
+        timeout: 120,
         contentImage: `${process.cwd()}/LinkedIn.svg`,
       },
       async function (_error, response, _metadata) {
