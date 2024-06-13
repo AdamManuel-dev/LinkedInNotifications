@@ -83,7 +83,7 @@ const grabLinks = async ({title, url, minuteLapse}: {
     }
 }
 
-const waitASecond = async (fn: () => void) => {
+const waitASecond = (fn: () => void) => {
   setTimeout(() => {
     fn()
   }, 1_000)
